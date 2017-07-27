@@ -15,8 +15,14 @@
 			</p>
 		</div>
 
-		{{posts}}
-			<h2>Primer Post</h2>
+		{% for post in posts%}
+		<div>
+			<p>published;{{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+			
+		{% endfor %}	
 
 		
 
